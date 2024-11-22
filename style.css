@@ -246,19 +246,105 @@ nav {
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-.menu-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--primary-color);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    margin: 0 4px;
+.step h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-.menu-icon i {
-    font-size: 14px;
+.step p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design for How It Works */
+@media (max-width: 1024px) {
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .how-it-works {
+        padding: 5rem 1.5rem;
+    }
+
+    .how-it-works h2 {
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .how-it-works {
+        padding: 4rem 1rem;
+    }
+
+    .step {
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .step-number {
+        margin: 0 0 1rem 0;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .how-it-works h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .step h3 {
+        font-size: 1.2rem;
+    }
+
+    .step p {
+        font-size: 0.95rem;
+    }
+
+    /* Add visual connection between steps */
+    .step::after {
+        content: '';
+        position: absolute;
+        bottom: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 1rem;
+        background: var(--primary-color);
+        display: block;
+    }
+
+    .step:last-child::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .steps {
+        max-width: 100%;
+    }
+
+    .step {
+        padding: 1.5rem;
+    }
+
+    .how-it-works h2 {
+        font-size: 1.8rem;
+    }
 }
 
 /* Benefits Section */
@@ -346,6 +432,21 @@ footer {
     margin-top: 3rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.menu-icon i {
+    font-size: 14px;
 }
 
 /* Responsive Design */
