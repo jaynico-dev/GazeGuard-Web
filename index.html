@@ -1,159 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GazeGuard - Parental Control for Screen Time Management</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GazeGuard - Smart Screen Time Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/logo.webp" />
+  </head>
+  <body>
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/logo.webp" alt="GazeGuard Logo">
-                <span>GazeGuard</span>
-            </div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#benefits">Benefits</a>
-                <a href="https://github.com/JNico07/GazeGuard-Web/releases/download/v1.0.4/GazeGuard.apk" class="download-btn">Download Now</a>
-            </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div
+          class="logo"
+          onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'});"
+        >
+          <img src="assets/logo.webp" alt="GazeGuard Logo" class="logo-img" />
+          <span class="logo-text">GazeGuard</span>
         </div>
+        <div class="nav-links">
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#benefits" class="nav-link">Benefits</a>
+          <a
+            href="https://github.com/JNico07/GazeGuard-Web/releases/download/v1.0.4/GazeGuard.apk"
+            class="download-btn"
+          >
+            <i class="fas fa-download"></i>
+            <span>Download Now</span>
+          </a>
+        </div>
+        <div class="menu-toggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </div>
     </nav>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <div class="mobile-nav-content">
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+        <a href="#benefits" class="mobile-nav-link">Benefits</a>
+        <a
+          href="https://github.com/JNico07/GazeGuard-Web/releases/download/v1.0.4/GazeGuard.apk"
+          class="mobile-download-btn"
+        >
+          <i class="fas fa-download"></i>
+          Download Now
+        </a>
+      </div>
+    </div>
+
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="hero">
+      <div class="hero-container">
         <div class="hero-content">
-            <h1>Monitor and Limit Screen Time</h1>
-            <p>Protect Digital Well-being</p>
-            <a href="#download" class="cta-button">Get Started</a>
+          <h1 class="hero-title">
+            Smart Screen Time
+            <span class="gradient-text">Management</span>
+            for Your Kids
+          </h1>
+          <p class="hero-description">
+            Take control of your child's digital habits with intelligent eye
+            tracking, real-time monitoring, and automatic device locking. Keep
+            them safe while promoting healthy screen time habits.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="https://github.com/JNico07/GazeGuard-Web/releases/download/v1.0.4/GazeGuard.apk"
+              class="primary-btn"
+            >
+              <i class="fas fa-download"></i>
+              <span>Download Free</span>
+              <div class="btn-shine"></div>
+            </a>
+            <a href="#how-it-works" class="secondary-btn">
+              <i class="fas fa-play"></i>
+              <span>See How It Works</span>
+            </a>
+          </div>
         </div>
+        <div class="hero-visual">
+          <div class="app-demo">
+            <div class="demo-container">
+              <img
+                src="assets/GazeGuard.gif"
+                alt="GazeGuard App Demo"
+                class="demo-gif"
+              />
+              <div class="demo-overlay"></div>
+            </div>
+            <div class="floating-elements">
+              <div class="floating-icon icon-1">
+                <i class="fas fa-eye"></i>
+              </div>
+              <div class="floating-icon icon-2">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="floating-icon icon-3">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="floating-icon icon-4">
+                <i class="fas fa-lock"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+      </div>
     </header>
 
     <!-- Features Section -->
     <section id="features" class="features">
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fas fa-eye"></i>
-                <h3>Eye Tracking</h3>
-                <p>Technology to accurately monitor screen time</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-bell"></i>
-                <h3>Monitor Real-time</h3>
-                <p>Monitor your child's screen time in real-time</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-clock"></i>
-                <h3>Screen Time Limits</h3>
-                <p>Set and manage screen time limits</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Screen Time Records</h3>
-                <p>Daily records of screen time</p>
-            </div>
-            <div class="feature-card"> 
-                <i class="fas fa-lock"></i>
-                <h3>Lock Device</h3>
-                <p>When child reaches Parent's set screen time limit, device will automatically lock. Parent can unlock it anytime</p>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Powerful Features for Digital Wellness</h2>
+          <p class="section-subtitle">
+            Everything you need to manage screen time effectively
+          </p>
         </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Advanced Eye Tracking</h3>
+            <p>
+              Cutting-edge technology that accurately monitors when your child
+              is actively looking at the screen
+            </p>
+            <div class="feature-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Real-time Monitoring</h3>
+            <p>
+              Get instant notifications and live updates on your child's screen
+              time activities
+            </p>
+            <div class="feature-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Smart Time Limits</h3>
+            <p>
+              Set customizable screen time limits that adapt to your family's
+              schedule and needs
+            </p>
+            <div class="feature-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Detailed Analytics</h3>
+            <p>
+              Comprehensive daily, weekly, and monthly reports of your child's
+              screen time patterns
+            </p>
+            <div class="feature-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Auto Device Lock</h3>
+            <p>
+              When limits are reached, the device automatically locks. You
+              maintain full control to unlock anytime
+            </p>
+            <div class="feature-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
-        <h2>How It Works</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Download & Install</h3>
-                <p>Click the download button and install the app on both your device and your child's device</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Create an account</h3>
-                <p>Open the app and create an account, just one account for you and all your children</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Set Up Profile</h3>
-                <p>Open the app on your child's device and Choose "Monitoring Mode", set the name of the child you want to monitor</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Configure Limits</h3>
-                <p>
-                    On parent's device, choose "Parent Dashboard", and click the menu 
-                    <span class="menu-icon"><i class="fas fa-bars"></i></span> 
-                    on the top left, and select "Set Limit & Lock"
-                </p>
-            </div>
-            <div class="step">
-                <div class="step-number">5</div>
-                <h3>Screen Time Records</h3>
-                <p>On parent dashboard, click the name you want to view the daily screen time records</p>
-            </div>
-            <div class="step">
-                <div class="step-number">6</div>
-                <h3>Monitor & Limit</h3>
-                <p>Let GazeGuard do the rest</p>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Simple Setup, Powerful Results</h2>
+          <p class="section-subtitle">
+            Get started in minutes with our easy 6-step process
+          </p>
         </div>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Download & Install</h3>
+              <p>
+                Download GazeGuard on both your device and your child's device
+                from our secure download link
+              </p>
+            </div>
+            <div class="step-icon">
+              <i class="fas fa-download"></i>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Create Account</h3>
+              <p>
+                Set up one parent account that will manage all your children's
+                devices and settings
+              </p>
+            </div>
+            <div class="step-icon">
+              <i class="fas fa-user-plus"></i>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Configure Child Profile</h3>
+              <p>
+                On your child's device, select "Monitoring Mode" and create a
+                profile with their name
+              </p>
+            </div>
+            <div class="step-icon">
+              <i class="fas fa-child"></i>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Set Time Limits</h3>
+              <p>
+                Use the Parent Dashboard to access "Set Limit & Lock" from the
+                menu
+                <span class="menu-highlight"><i class="fas fa-bars"></i></span>
+              </p>
+            </div>
+            <div class="step-icon">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>View Reports</h3>
+              <p>
+                Click on any child's name in your dashboard to view detailed
+                screen time analytics and patterns
+              </p>
+            </div>
+            <div class="step-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h3>Enjoy Peace of Mind</h3>
+              <p>
+                Relax knowing GazeGuard is automatically managing healthy screen
+                time habits for your family
+              </p>
+            </div>
+            <div class="step-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Benefits Section -->
     <section id="benefits" class="benefits">
-        <h2>Why Choose GazeGuard?</h2>
-        <div class="benefits-container">
-            <div class="benefit">
-                <i class="fas fa-brain"></i>
-                <h3>Healthy Development</h3>
-                <p>Monitoring and Limiting digital habits for your child</p>
-            </div>
-            <div class="benefit">
-                <i class="fas fa-heart"></i>
-                <h3>Peace of Mind</h3>
-                <p>Know your child's screen time is managed properly</p>
-            </div>
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose GazeGuard</h2>
         </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Promotes Healthy Development</h3>
+            <p>
+              Help your child develop balanced digital habits that support their
+              physical and mental well-being
+            </p>
+            <ul class="benefit-features">
+              <li>
+                <i class="fas fa-check"></i> Reduces eye strain and fatigue
+              </li>
+              <li><i class="fas fa-check"></i> Encourages physical activity</li>
+              <li><i class="fas fa-check"></i> Improves sleep quality</li>
+            </ul>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Complete Peace of Mind</h3>
+            <p>
+              Stay informed and in control of your child's digital world with
+              real-time insights and automatic protection
+            </p>
+            <ul class="benefit-features">
+              <li><i class="fas fa-check"></i> 24/7 monitoring and alerts</li>
+              <li><i class="fas fa-check"></i> Automatic enforcement</li>
+              <li><i class="fas fa-check"></i> Detailed progress reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Download Section -->
     <section id="download" class="download">
-        <h2>Download GazeGuard Today</h2>
-        <p>Available on Android devices</p>
-        <a href="https://github.com/JNico07/GazeGuard-Web/releases/download/v1.0.4/GazeGuard.apk" class="download-button">
-            <img src="assets/logo.webp" alt="Get it Now!">
-        </a>
+      <div class="download-container">
+        <div class="download-content">
+          <h2>Ready to Transform Your Family's Digital Life?</h2>
+          <p>
+            Download GazeGuard today and start building healthier screen time
+            habits
+          </p>
+          <div class="download-features">
+            <div class="download-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>100% Free to Download</span>
+            </div>
+            <div class="download-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Works on All Android Devices</span>
+            </div>
+            <div class="download-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Setup in Under 5 Minutes</span>
+            </div>
+          </div>
+          <a
+            href="https://github.com/JNico07/GazeGuard-Web/releases/download/v1.0.4/GazeGuard.apk"
+            class="download-button"
+          >
+            <div class="download-button-content">
+              <img src="assets/logo.webp" alt="GazeGuard" />
+              <div class="download-text">
+                <span class="download-main">Download GazeGuard</span>
+                <span class="download-sub">Free for Android</span>
+              </div>
+            </div>
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
+      <div class="footer-container">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>GazeGuard</h4>
-                <p>Smart screen time management for the digital age</p>
+          <!-- Brand Section -->
+          <div class="footer-section footer-brand">
+            <div class="footer-logo">
+              <img src="assets/logo.webp" alt="GazeGuard Logo" />
+              <span>GazeGuard</span>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#benefits">Benefits</a>
+            <p>
+              Empowering healthy digital habits with intelligent screen time
+              management and controls.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section footer-links-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#download">Download</a></li>
+            </ul>
+          </div>
+
+          <!-- Optional Social Section -->
+          <div class="footer-section footer-social">
+            <h4>Follow</h4>
+            <div class="social-icons">
+              <a
+                href="https://github.com/jaynico-dev"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jaynicoolano"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
             </div>
+          </div>
         </div>
+
+        <!-- Bottom Bar -->
         <div class="footer-bottom">
-            <p>&copy; 2024 GazeGuard. All rights reserved.</p>
+          <p>&copy; 2024 GazeGuard. All rights reserved.</p>
         </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
